@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "../components/Logo";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
           Read <Link href="/posts/first-post">this page!</Link>
           Welcome to <a href="https://nextjs.org">Gloucester City Church</a>
         </h1>
-
+        <Logo />
         <Image
           src="/images/china_town.png"
           height={144} // Desired size with correct aspect ratio

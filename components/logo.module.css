@@ -1,0 +1,30 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translateX(-50%);
+  background-color: lightblue;
+  border-radius: 3rem 0 3rem 0;
+  padding: 0 1rem 0 1rem;
+  box-shadow: 2px 2px 5px white;
+
+  text-align: end;
+}
+/* .title_container{
+  
+} */
+.title {
+  color: white;
+  font-size: 3rem;
+  line-height: 1rem;
+  margin: 2.3rem 0;
+}
+.gloucester_container {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+.gloucester {
+  color: white;
+  font-size: 1rem;
+  line-height: 0.5rem;
+}
