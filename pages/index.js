@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../components/Logo";
-import Header2 from "../components/Header2";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -18,12 +18,12 @@ export default function Home() {
         />
       </Head>
       <main className="2xl:max-w-7xl 2xl:mx-auto">
-        <Header2 />
+        <Header />
         <section
-          className="w-screen"
+          className=""
           // style={{ position: "relative", width: "100vw", height: "100vh" }}
         >
-          <div className=" ">
+          <div className="relative">
             <Image
               src="/images/gloucester_cathedral.jpg"
               // fill
@@ -35,9 +35,9 @@ export default function Home() {
               //   33vw"
               alt="Choucester Church"
             />
-          </div>
-          <div className="absolute left-1/2  top-36 sm:top-1/3 md:top-1/2 -translate-x-2/4 animate-ascend">
-            <Logo />
+            <div className="absolute left-1/2  top-1/2 -translate-x-2/4 animate-ascend">
+              <Logo />
+            </div>
           </div>
         </section>
 
