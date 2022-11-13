@@ -145,14 +145,17 @@ const contactUs = [
   },
 ];
 
-export default function Header2() {
+export default function Header() {
   return (
-    <Popover className="relative bg-white px-4 sm:px-6 z-10">
+    <Popover className="absolute w-full md:bg-white md:opacity-90 px-4 sm:px-6 z-10">
       {/* <div className="mx-auto max-w-7xl px-4 sm:px-6"> */}
 
-      <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-        <LogoMini />
-        <div className="-my-2 -mr-2 md:hidden">
+      <div className="flex items-center justify-between py-4 sm:py-6">
+        <div className="hidden sm:flex">
+          <LogoMini />
+        </div>
+        {/* menu button */}
+        <div className="-my-2  md:hidden md:w-0">
           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-myblue  hover:opacity-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myblue">
             <span className="sr-only">Open menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -160,7 +163,7 @@ export default function Header2() {
         </div>
         <Popover.Group
           as="nav"
-          className="hidden space-x-2 md:flex md:justify-center align-middle items-center"
+          className="hidden  md:flex md:justify-center align-middle items-center"
         >
           <PopOver menuList={aboutUs} menuListName="About Us" />
           <PopOver menuList={communityLife} menuListName="Community Life" />
@@ -168,7 +171,7 @@ export default function Header2() {
           <PopOver menuList={communityAction} menuListName="Community Action" />
           <PopOver menuList={resources} menuListName="Resources" />
         </Popover.Group>
-        <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0 hover:opacity-50">
+        <div className="hidden md:items-center md:justify-end md:flex md:flex-0  hover:opacity-50">
           <a
             href="#"
             className="whitespace-nowrap font-medium text-myblue rounded-br-3xl rounded-tl-3xl border-myblue border-2 border-opacity-75 text-base font-sans px-4 py-2 hover:opacity-50"
@@ -230,46 +233,6 @@ export default function Header2() {
                 </nav>
               </div>
             </div>
-            {/* <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Church Diary
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Contact Us
-                </a>
-                {communityLife.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div> 
-              <div>
-                <a
-                  href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
-              </div> 
-                </div> */}
           </div>
         </Popover.Panel>
       </Transition>
