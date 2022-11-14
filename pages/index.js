@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Carousel from "../components/Carousel";
+import Card from "../components/Card";
 
 export default function Home() {
   return (
@@ -31,31 +32,31 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative w-full ">
-          <div className="m-2 overflow-clip ">
-            <div className="relative h-[30vh]">
-              <Image
-                src="/images/students.jpg"
-                alt="Choucester Church"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  position: "absolute",
-                }}
-                // className="animate-fadein1"
-              />
-            </div>
-            <div className="h-[100%] absolute top-0 right-0 w-[40%] bg-white opacity-95"></div>
-            <div className="mt-2 font-sans absolute bottom-4 right-4 text-right w-1/3 p-2 space-y-2">
-              <h4 className="font-semibold font-sans tracking-wide text-lg text-neutral-600">
-                Love Jesus
-              </h4>
-              <p className="text-neutral-600 tracking-tight">
-                We're a community of people who love God and each other.
-              </p>
-            </div>
-          </div>
+        <section className="relative w-full gap-8 p-8 space-y-8 columns-1 md:columns-2 ">
+          <Card
+            src="/images/students.jpg"
+            alt="students"
+            title="Love Jesus"
+            blurb="We're a vibrant community of people who love God and love each other."
+          />
+          <Card
+            src="/images/children.jpg"
+            alt="children"
+            title="Families Welcome"
+            blurb="Young or old, or somewhere inbetween you will find a warm welcome."
+          />
+          <Card
+            src="/images/foodbox.jpg"
+            alt="food donations"
+            title="Community Care"
+            blurb="We care about the people of Gloucester and are reaching out to help."
+          />
+          <Card
+            src="/images/bible.jpg"
+            alt="bible"
+            title="Life in God"
+            blurb="We're building our lives on God's will, following his word and living out his commands."
+          />
         </section>
         <h1 className="title text-3xl font-bold underline">
           Read <Link href="/posts/first-post">this page!</Link>
