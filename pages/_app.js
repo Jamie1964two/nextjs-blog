@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { useEffect } from "react";
+import Layout from "../components/Layout";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -8,5 +9,9 @@ export default function App({ Component, pageProps }) {
     };
     use();
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

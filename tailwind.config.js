@@ -50,7 +50,7 @@ module.exports = {
         },
       },
       animation: {
-        ascend: "ascend 0.8s ease-in-out",
+        ascend: "ascend 1.2s ease-in-out",
         fadein1: "fadein1 20s ease-in-out infinite",
         fadein2: "fadein2 20s ease-in-out infinite",
         fadein3: "fadein3 20s ease-in-out infinite",

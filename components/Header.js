@@ -6,100 +6,104 @@ import {
   ArrowPathIcon,
   Bars3Icon,
   BookmarkSquareIcon,
+  CalendarDaysIcon,
   CalendarIcon,
   ChartBarIcon,
+  ChatBubbleBottomCenterIcon,
+  ChatBubbleLeftEllipsisIcon,
   CursorArrowRaysIcon,
+  GifIcon,
+  HandThumbUpIcon,
+  HeartIcon,
   LifebuoyIcon,
+  MegaphoneIcon,
   PhoneIcon,
   PlayIcon,
   ShieldCheckIcon,
+  SparklesIcon,
   Squares2X2Icon,
+  UserGroupIcon,
+  UserPlusIcon,
   XMarkIcon,
+  ChatBubbleLeftRightIcon,
+  ChevronDownIcon,
+  ListBulletIcon,
+  UserCircleIcon,
+  UserIcon,
+  GiftIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const aboutUs = [
   {
     name: "About Us",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "Find out who we are and why.",
     href: "#",
-    icon: ChartBarIcon,
+    icon: UserCircleIcon,
   },
   {
     name: "Our Values",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Statement of Faith",
-    description: "Your customers' data will be safe and secure.",
+    description: "A little about the values we seek to live by.",
     href: "#",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Meet the Team",
-    description: "Connect with third-party tools that you're already using.",
+    name: "Statement of Faith",
+    description: "Read the set of core beliefs we hold on to.",
     href: "#",
-    icon: Squares2X2Icon,
+    icon: ListBulletIcon,
   },
   {
-    name: "Students",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
+    name: "Meet the Team",
+    description: "Find out who's who at City Church.",
     href: "#",
-    icon: ArrowPathIcon,
+    icon: UserIcon,
   },
 ];
 
 const communityLife = [
   {
     name: "Community Life",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
+    description: "God loves community and so do we.",
     href: "#",
-    icon: LifebuoyIcon,
+    icon: UserGroupIcon,
   },
   {
     name: "What's On",
-    description: "Take a look at our church calendar",
+    description: "Take a look at our church calendar.",
     href: "#",
-    icon: BookmarkSquareIcon,
+    icon: CalendarDaysIcon,
   },
   {
     name: "Students",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
+    description: "Get involved with our thriving students' group.",
     href: "#",
-    icon: BookmarkSquareIcon,
+    icon: ChatBubbleLeftRightIcon,
   },
   {
     name: "Children",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
+    description: "Kids are a very welcome part of CityChurch.",
     href: "#",
-    icon: CalendarIcon,
+    icon: SparklesIcon,
   },
   {
     name: "Serving",
-    description: "Understand how we take your privacy seriously.",
+    description: "Showing love by serving one another.",
     href: "#",
-    icon: ShieldCheckIcon,
+    icon: HandThumbUpIcon,
   },
 ];
 const newHere = [
   {
     name: "New Here",
-    description: "Our heart to serve our local community",
+    description: "We'd love to answer any questions you have.",
     href: "#",
-    icon: ChartBarIcon,
+    icon: HeartIcon,
   },
   {
     name: "Your First Sunday Visit",
-    description: "Speak directly to your customers in a more meaningful way.",
+    description: "What to expect if you join us for a Sunday service.",
     href: "#",
-    icon: CursorArrowRaysIcon,
+    icon: ChatBubbleBottomCenterIcon,
   },
 ];
 const communityAction = [
@@ -107,25 +111,25 @@ const communityAction = [
     name: "Community Action",
     description: "Our heart to serve our local community",
     href: "#",
-    icon: ChartBarIcon,
+    icon: HeartIcon,
   },
   {
     name: "Noah's Ark",
-    description: "Speak directly to your customers in a more meaningful way.",
+    description: "Our wonderful children's free weekly event.",
     href: "#",
-    icon: CursorArrowRaysIcon,
+    icon: SparklesIcon,
   },
   {
     name: "Food Bank",
-    description: "Your customers' data will be safe and secure.",
+    description: "Loving our community in need.",
     href: "#",
-    icon: ShieldCheckIcon,
+    icon: GiftIcon,
   },
   {
     name: "Supporting Local Action",
-    description: "Connect with third-party tools that you're already using.",
+    description: "Discover how you can get involved locally.",
     href: "#",
-    icon: Squares2X2Icon,
+    icon: ShieldCheckIcon,
   },
 ];
 const resources = [
@@ -133,7 +137,7 @@ const resources = [
     name: "Resources",
     description: "Check out our free materials to help you grow in faith",
     href: "#",
-    icon: ChartBarIcon,
+    icon: MegaphoneIcon,
   },
 ];
 const contactUs = [
@@ -141,7 +145,7 @@ const contactUs = [
     name: "Contact Us",
     description: "We'd love to hear from you",
     href: "#",
-    icon: ChartBarIcon,
+    icon: ChatBubbleLeftEllipsisIcon,
   },
 ];
 
@@ -155,8 +159,10 @@ export default function Header() {
           <LogoMini />
         </div>
         {/* menu button */}
-        <div className="-my-2  md:hidden md:w-0">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-myblue  hover:opacity-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myblue">
+        <div className="md:-my-2  md:hidden md:w-0">
+          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-myblue  hover:opacity-50 ">
+            {/* focus:outline-none  */}
+            {/* focus:ring-2 focus:ring-inset focus:ring-myblue"> */}
             <span className="sr-only">Open menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
@@ -199,7 +205,8 @@ export default function Header() {
               <div className="flex items-center justify-between">
                 <LogoMini />
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myblue">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
+                    {/* focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myblue"> */}
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
