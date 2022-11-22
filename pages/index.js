@@ -17,7 +17,7 @@ export default function Home() {
         <title>City Church Choucester</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="2xl:max-w-7xl 2xl:mx-auto">
+      <main>
         <section className="relative h-[100vh] w-full">
           {/* <Header className="absolute" /> */}
           <div className="relative">

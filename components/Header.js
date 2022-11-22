@@ -151,7 +151,7 @@ const contactUs = [
 
 export default function Header() {
   return (
-    <Popover className="absolute w-full md:bg-white md:opacity-90 px-4 sm:px-6 z-10">
+    <Popover className="absolute w-full md:bg-white md:opacity-90 px-4 sm:px-6 z-10 2xl:max-w-7xl 2xl:mx-auto">
       {/* <div className="mx-auto max-w-7xl px-4 sm:px-6"> */}
 
       <div className="flex items-center justify-between py-4 sm:py-6">
