@@ -8,7 +8,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
         {/* <script
@@ -24,7 +24,7 @@ export default function Document() {
 
         {/* <script src="../node_modules/tw-elements/dist/js/index.min.js"></script> */}
       </Head>
-      <body>
+      <body className="font-sans">
         <Main />
         <NextScript />
         <Script src="./TW-ELEMENTS-PATH/dist/js/index.min.js" />

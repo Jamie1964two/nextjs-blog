@@ -28,8 +28,8 @@ export default function Home() {
               </h2>
               <Logo />
             </div>
-            <div className=" absolute  left-1/2  bottom-[10%] md:bottom-[15%] lg:bottom-[20%] -translate-x-2/4 animate-ascend text-center bg-gradient-to-br from-neutral-300 via-neutral-100 to-neutral-300 rounded-lg border-2 border-[rgba(0,0,0,0)] hover:border-gray-300 transition hover:duration-800 hover:opacity-90 cursor-pointer">
-              <h3 className=" text-neutral-800 p-4  lg:text-xl">
+            <div className=" absolute left-1/2 bottom-[10%] md:bottom-[15%] lg:bottom-[20%] tall:bottom-[5%] -translate-x-2/4 animate-ascend text-center bg-gradient-to-br from-neutral-300 via-neutral-100 to-neutral-300 rounded-lg border-2 border-[rgba(0,0,0,0)] hover:border-gray-300 transition hover:duration-800 hover:opacity-90 cursor-pointer">
+              <h3 className=" text-neutral-800 p-4  lg:text-xl tall:text-sm">
                 Join us this Sunday 10:30am in the Chapel
               </h3>
             </div>

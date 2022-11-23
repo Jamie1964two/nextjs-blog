@@ -37,25 +37,25 @@ const aboutUs = [
   {
     name: "About Us",
     description: "Find out who we are and why.",
-    href: "#",
+    href: "AboutUs",
     icon: UserCircleIcon,
   },
   {
     name: "Our Values",
     description: "A little about the values we seek to live by.",
-    href: "#",
+    href: "OurValues",
     icon: ShieldCheckIcon,
   },
   {
     name: "Statement of Faith",
     description: "Read the set of core beliefs we hold on to.",
-    href: "#",
+    href: "StatementOfFaith",
     icon: ListBulletIcon,
   },
   {
     name: "Meet the Team",
     description: "Find out who's who at City Church.",
-    href: "#",
+    href: "MeetTheTeam",
     icon: UserIcon,
   },
 ];
@@ -64,19 +64,19 @@ const communityLife = [
   {
     name: "Community Life",
     description: "God loves community and so do we.",
-    href: "#",
+    href: "CommunityLife",
     icon: UserGroupIcon,
   },
   {
     name: "What's On",
     description: "Take a look at our church calendar.",
-    href: "#",
+    href: "Calendar",
     icon: CalendarDaysIcon,
   },
   {
     name: "Students",
     description: "Get involved with our thriving students' group.",
-    href: "#",
+    href: "Students",
     icon: ChatBubbleLeftRightIcon,
   },
   {

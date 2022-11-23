@@ -9,9 +9,6 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
-    fontFamily: {
-      sans: ["Quicksand", "ui-sans-serif", "system-ui"],
-    },
     extend: {
       keyframes: {
         ascend: {
@@ -60,6 +57,12 @@ module.exports = {
       },
       colors: {
         myblue: "#77b1d1",
+      },
+      screens: {
+        tall: { raw: "(max-height: 420px)" },
+      },
+      fontFamily: {
+        sans: ["Quicksand", "ui-sans-serif", "system-ui"],
       },
     },
   },

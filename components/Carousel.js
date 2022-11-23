@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import cathedral from "../public/images/gloucester_cathedral.jpg";
+import bible from "../public/images/bible.jpg";
+import service from "../public/images/service.jpg";
+import communion from "../public/images/communion.jpg";
 
 const Carousel = () => {
   return (
@@ -18,7 +22,7 @@ const Carousel = () => {
       </div> */}
       <div className="relative  md:w-full h-full">
         <Image
-          src="/images/gloucester_cathedral.jpg"
+          src={cathedral}
           alt="Choucester Church"
           fill
           sizes="100vw"
@@ -29,8 +33,8 @@ const Carousel = () => {
           // className="animate-fadein1"
         />
         <Image
-          src="/images/bible.jpg"
-          alt="Choucester Church"
+          src={bible}
+          alt="bible"
           fill
           sizes="100vw"
           style={{
@@ -40,8 +44,8 @@ const Carousel = () => {
           className="animate-fadein2"
         />
         <Image
-          src="/images/service.jpg"
-          alt="Choucester Church"
+          src={service}
+          alt="a service at CCG"
           fill
           sizes="100vw"
           style={{
@@ -51,8 +55,8 @@ const Carousel = () => {
           className="animate-fadein3"
         />
         <Image
-          src="/images/communion.jpg"
-          alt="Choucester Church"
+          src={communion}
+          alt="Communion"
           fill
           sizes="100vw"
           style={{

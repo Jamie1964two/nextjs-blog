@@ -66,13 +66,13 @@ export default function Action() {
             }}
             // className="animate-fadein1"
           />
-          <div className="text1 font-sans font-semibold absolute top-[34vh] md:top-[20vh] -left-full bg-white mix-blend-screen text-black py-4 px-4 md:px-8 lg:px-12 text-4xl sm:text-6xl md:text-8xl lg:text-8xl opacity-0 rounded-lg">
+          <div className="text1 font-sans font-semibold absolute top-[34vh] tall:top-[15vh] md:top-[20vh]  -left-full bg-white mix-blend-screen text-black py-4 px-4 md:px-8 lg:px-12 text-4xl sm:text-6xl md:text-8xl lg:text-8xl opacity-0 rounded-lg">
             We'd love
           </div>
-          <div className="text2 font-sans font-semibold absolute top-[45vh] md:top-[40vh] lg:top-[45vh] -right-full bg-white mix-blend-screen text-black py-4 px-4 md:px-8 lg:px-12 text-4xl sm:text-6xl md:text-8xl lg:text-8xl opacity-0 rounded-lg">
+          <div className="text2 font-sans font-semibold absolute top-[45vh] md:top-[40vh] lg:top-[45vh] tall:top-[45vh] -right-full bg-white mix-blend-screen text-black py-4 px-4 md:px-8 lg:px-12 text-4xl sm:text-6xl md:text-8xl lg:text-8xl opacity-0 rounded-lg">
             to meet you!
           </div>
-          <div className="text3 text-center font-sans font-medium absolute top-[65vh] md:top-[80vh]  border-2 border-white mix-blend-screen text-white py-2 px-2 md:px-4 text-lg sm:text-xl opacity-0 rounded-xl left-1/2 -translate-x-1/2 cursor-pointer hover:bg-[rgba(255,255,255,0.1)] duration-200">
+          <div className="text3 text-center font-sans font-medium absolute top-[65vh] tall:top-[80vh] md:top-[80vh]  border-2 border-white mix-blend-screen text-white py-2 px-2 md:px-4 text-lg sm:text-xl opacity-0 rounded-xl left-1/2 -translate-x-1/2 cursor-pointer hover:bg-[rgba(255,255,255,0.1)] duration-200">
             Join us this Sunday
           </div>
         </div>

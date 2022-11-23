@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 const Card = (props) => {
   return (
     <div className="m-0 overflow-clip rounded-l-sm relative shadow-md">
-      <div className="relative h-[30vh]">
+      <div className="relative h-[30vh] tall:h-48">
         <Image
           src={props.src} //"/images/students.jpg"
           alt={props.alt} //"Choucester Church"
