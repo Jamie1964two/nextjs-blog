@@ -82,13 +82,13 @@ const communityLife = [
   {
     name: "Children",
     description: "Kids are a very welcome part of CityChurch.",
-    href: "#",
+    href: "Children",
     icon: SparklesIcon,
   },
   {
     name: "Serving",
     description: "Showing love by serving one another.",
-    href: "#",
+    href: "Serving",
     icon: HandThumbUpIcon,
   },
 ];

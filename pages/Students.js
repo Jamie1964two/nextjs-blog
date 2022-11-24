@@ -25,7 +25,7 @@ const Students = () => {
         <h1 className="mb-2 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
           Students.
         </h1>
-        <h2 className="mr-2 mb-4 mt-6 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
+        <h2 className="mr-2 mb-4 mt-2 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
           Get ready for a great year in God!
         </h2>
         <p className="sm:text-lg">
