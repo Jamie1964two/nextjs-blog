@@ -1,6 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 function classNames(...classes) {
@@ -8,6 +9,7 @@ function classNames(...classes) {
 }
 
 export default function PopOver(props) {
+  const [isShowing, setIsShowing] = useState(false);
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -55,11 +57,18 @@ export default function PopOver(props) {
                 {/* ring-1 ring-black ring-opacity-5"> */}
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   {props.menuList.map((item) => (
-                    <Link
+                    <Popover.Button
+                      as={Link}
                       href={"/" + item.href}
                       className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
                       key={item.name}
                     >
+                      {/* Insights
+                      <Link
+                        href={"/" + item.href}
+                        className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                        key={item.name}
+                      > */}
                       {/* <a
                         key={item.name}
                         // href={item.href}
@@ -78,7 +87,8 @@ export default function PopOver(props) {
                         </p>
                       </div>
                       {/* </a> */}
-                    </Link>
+                      {/* </Link> */}
+                    </Popover.Button>
                   ))}
                 </div>
               </div>
