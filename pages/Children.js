@@ -104,7 +104,7 @@ const Children = () => {
             </p>
           </div>
           <div className="basis-1/2 md:basis-1/3 ">
-            <div className="relative mx-auto space-y-16 mt-12 md:space-y-8 w-2/3">
+            <div className="relative mx-auto space-y-16 mt-12 md:space-y-8 w-2/3 overflow-hidden">
               <Image
                 src={littleFish}
                 alt="Little-Fish Group logo"
