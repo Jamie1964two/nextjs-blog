@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import cathedral from "../public/images/gloucester_cathedral.jpg";
+import cathedral from "../public/images/cathedral.jpg";
 import bible from "../public/images/bible.jpg";
 import service from "../public/images/service.jpg";
 import communion from "../public/images/communion.jpg";
@@ -10,7 +10,7 @@ const Carousel = () => {
     <div className="relative md:w-full h-[100vh]">
       {/* <div className="relative block  md:w-full  h-[100vh]">
         <Image
-          src="/images/gloucester_cathedral.jpg"
+          src="/images/cathedral.jpg"
           alt="Choucester Church"
           priority
           fill

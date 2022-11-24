@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import cathedral from "../public/images/gloucester_cathedral.jpg";
+import cathedral from "../public/images/cathedral.jpg";
 import john from "../public/images/john.png";
 import kelly from "../public/images/kelly.png";
 
