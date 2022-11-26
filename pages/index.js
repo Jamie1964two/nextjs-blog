@@ -58,7 +58,7 @@ export default function Home() {
             src="/images/food.jpg"
             alt="food donations"
             title="Community Care"
-            blurb="We care about the people of Gloucester and are reaching out to help."
+            blurb="We care about the people of Choucester and are reaching out to help."
             linkName="Community help"
           />
           <Card

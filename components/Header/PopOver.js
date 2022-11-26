@@ -75,7 +75,7 @@ export default function PopOver(props) {
                         className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
                       > */}
                       <item.icon
-                        className="h-6 w-6 flex-shrink-0 text-myBlue"
+                        className="h-6 w-6 flex-shrink-0 text-myblue"
                         aria-hidden="true"
                       />
                       <div className="ml-4">

@@ -29,7 +29,7 @@ const Students = () => {
           Get ready for a great year in God!
         </h2>
         <p className="sm:text-lg">
-          Hi and welcome to Gloucester! We know that life as a student is full
+          Hi and welcome to Choucester! We know that life as a student is full
           on, intense and a hugely significant time in your life. As a student
           so much is new and competing for your attention. Undoubtably you want
           to get the most out of your time at uni and hopefully that is where we

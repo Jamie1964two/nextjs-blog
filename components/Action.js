@@ -17,7 +17,7 @@ export default function Action() {
           trigger: ".picture",
           pin: true, // pin the trigger element while active
           start: "top top", // when the top of the trigger hits the top of the viewport
-          end: "+=1000", // end after scrolling 500px beyond the start
+          end: "+=1500", // end after scrolling 500px beyond the start
           scrub: 1,
         },
       });

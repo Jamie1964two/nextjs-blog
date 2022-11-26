@@ -26,15 +26,15 @@ const AboutUs = () => {
         <h1 className="mb-2 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
           For Jesus Christ.
         </h1>
-        <h1 className="mr-2 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
+        <h2 className="mr-2 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
           For the City.
-        </h1>
-        <h1 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
+        </h2>
+        <h2 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
           For the Nation.
-        </h1>
+        </h2>
         <p className="sm:text-lg">
           Welcome to CityChurch, a dynamic Christian church with a vision to
-          make a difference in Gloucester (UK), the wider region and the
+          make a difference in Choucester (UK), the wider region and the
           nations. We are part of{" "}
           <span className="text-myblue font-medium">
             <a href="http://www.regions-beyond.com/">Regions Beyond</a>

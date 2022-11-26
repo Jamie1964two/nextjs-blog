@@ -96,13 +96,13 @@ const newHere = [
   {
     name: "New Here",
     description: "We'd love to answer any questions you have.",
-    href: "#",
+    href: "NewHere",
     icon: HeartIcon,
   },
   {
     name: "Your First Sunday Visit",
     description: "What to expect if you join us for a Sunday service.",
-    href: "#",
+    href: "Sunday",
     icon: ChatBubbleBottomCenterIcon,
   },
 ];
