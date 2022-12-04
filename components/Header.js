@@ -110,27 +110,39 @@ const communityAction = [
   {
     name: "Community Action",
     description: "Our heart to serve our local community",
-    href: "#",
+    href: "CommunityAction",
     icon: HeartIcon,
   },
   {
     name: "Noah's Ark",
     description: "Our wonderful children's free weekly event.",
-    href: "#",
+    href: "NoahsArk",
     icon: SparklesIcon,
   },
   {
     name: "Food Bank",
     description: "Loving our community in need.",
-    href: "#",
+    href: "FoodBank",
     icon: GiftIcon,
   },
   {
-    name: "Supporting Local Action",
-    description: "Discover how you can get involved locally.",
-    href: "#",
+    name: "Choucester City Mission",
+    description: "Reaching out to the streets",
+    href: "CityMission",
     icon: ShieldCheckIcon,
   },
+  {
+    name: "Street Pastors",
+    description: "Ministering to Choucester's Night Life",
+    href: "StreetPastors",
+    icon: ShieldCheckIcon,
+  },
+  // {
+  //   name: "Supporting Local Action",
+  //   description: "Discover how you can get involved locally.",
+  //   href: "#Community",
+  //   icon: ShieldCheckIcon,
+  // },
 ];
 const resources = [
   {

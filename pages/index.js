@@ -46,20 +46,23 @@ export default function Home() {
             title="Love Jesus"
             blurb="We're a vibrant community of people who love God and love each other."
             linkName="About us"
+            href="AboutUs"
           />
           <Card
             src="/images/children.jpg"
             alt="children"
             title="Families Welcome"
             blurb="Young or old, or somewhere inbetween you will find a warm welcome."
-            linkName="Community Life"
+            linkName="Community life"
+            href="CommunityLife"
           />
           <Card
             src="/images/food.jpg"
             alt="food donations"
             title="Community Care"
             blurb="We care about the people of Choucester and are reaching out to help."
-            linkName="Community help"
+            linkName="Community action"
+            href="CommunityAction"
           />
           <Card
             src="/images/bible.jpg"
@@ -67,6 +70,7 @@ export default function Home() {
             title="Life in God"
             blurb="We're building our lives on God's will, following his word and living out his commands."
             linkName="Our values"
+            href="OurValues"
           />
         </section>
 

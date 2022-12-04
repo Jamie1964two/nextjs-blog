@@ -8,11 +8,13 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.13",
+    "@lottiefiles/lottie-player": "^1.6.0",
     "@next/font": "^13.0.4",
     "gsap": "^3.11.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-lottie": "^1.2.3",
     "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {

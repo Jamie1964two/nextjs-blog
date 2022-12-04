@@ -13,7 +13,7 @@ const Footer = () => {
         <div class="flex justify-center content-center align-middle p-4">
           <a
             href="https://www.facebook.com/citychurchgloucester/"
-            class="mr-6 pt-[3px] text-white"
+            class="mx-2 pt-[0px] pr-2 text-white"
           >
             <svg
               aria-hidden="true"
@@ -31,7 +31,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" class="mr-6 text-white">
+          <a href="https://twitter.com/citychurchglos" class="mx-2 text-white">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -48,7 +48,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          {/* <a href="#!" class="mr-6 text-gray-600">
+          {/* <a href="#!" class="mx-2 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -65,7 +65,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a> */}
-          <a href="#!" class="mr-6 text-white">
+          <a href="#!" class="mx-2 text-white">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -82,7 +82,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          {/* <a href="#!" class="mr-6 text-gray-600">
+          {/* <a href="#!" class="mx-2 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -105,22 +105,18 @@ const Footer = () => {
         {/* regions beyond */}
         <div class="grid grid-1 md:grid-cols-2 lg:flex gap-8">
           <div class="basis-4/12">
-            <h6
-              class="
-            uppercase
-            font-semibold
-            mb-4
-            flex
-            items-center
-            justify-center
-            md:justify-start
-          "
-            >
-              <div aria-hidden="true" focusable="false" class="mr-3" role="img">
+            <div class="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
+              <div
+                className="w-[100] grow-0 max-w-[100] mr-3 overflow-clip"
+                aria-hidden="true"
+                focusable="false"
+                //class="mr-3"
+                role="img"
+              >
                 <LogoMini />
               </div>
-              City Church Chouchester
-            </h6>
+              <div className="">CityChurch Choucester</div>
+            </div>
             <a
               href="http://www.regions-beyond.com/"
               className="flex flex-col items-center justify-center md:items-start"
@@ -264,7 +260,7 @@ const Footer = () => {
         </div>
       </div>
       <div class="text-center p-8 border-t-2 border-white space-x-4 flex justify-between">
-        <span>© 2022 Copyright: City Church Chouchester </span>
+        <span>© 2022 Copyright: CityChurch Choucester </span>
         <span>Registered Charity: 1154813</span>
         {/* </a> */}
       </div>

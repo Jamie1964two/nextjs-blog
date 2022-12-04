@@ -17,22 +17,23 @@ export default function Action() {
           trigger: ".picture",
           pin: true, // pin the trigger element while active
           start: "top top", // when the top of the trigger hits the top of the viewport
-          end: "+=1500", // end after scrolling 500px beyond the start
-          scrub: 1,
+          end: "+=500", // end after scrolling 500px beyond the start
+          //scrub: 1,
+          toggleActions: "play pause resume reset",
         },
       });
 
       tl.current
         .to(".text1", {
           x: "110vw", //900
-          duration: 2,
+          duration: 1,
           opacity: 1,
         })
         .to(
           ".text2",
           {
             x: "-105vw",
-            duration: 2,
+            duration: 1,
             opacity: 1,
           },
           "-=50%"
@@ -41,10 +42,28 @@ export default function Action() {
           ".text3",
           {
             // x: -900,
-            duration: 2,
+            duration: 1,
             opacity: 1,
           },
-          "-=10%"
+          "+=50%"
+        )
+        .to(
+          ".text3",
+          {
+            // x: -900,
+            duration: 0.2,
+            "background-color": "rgba(255,255,255,0.3)",
+          },
+          "+=20%"
+        )
+        .to(
+          ".text3",
+          {
+            // x: -900,
+            duration: 0.2,
+            "background-color": "rgba(255,255,255,0.1)",
+          }
+          //"-=10%"
         );
     }, refBox);
 

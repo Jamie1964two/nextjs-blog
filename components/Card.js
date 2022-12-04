@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/Link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const Card = (props) => {
@@ -28,13 +29,15 @@ const Card = (props) => {
           {props.blurb}
         </p>
         <div className="flex content-center hover:opacity-50 hover:cursor-pointer">
-          <p className="text-myblue text-sm">
-            {props.linkName}
-            <ArrowRightIcon
-              className="h-4 w-4 ml-[2px] flex-shrink-0 text-myblue font-bold inline-block"
-              aria-hidden="true"
-            />
-          </p>
+          <Link href={"/" + props.href}>
+            <p className="text-myblue text-sm">
+              {props.linkName}
+              <ArrowRightIcon
+                className="h-4 w-4 ml-[2px] flex-shrink-0 text-myblue font-bold inline-block"
+                aria-hidden="true"
+              />
+            </p>
+          </Link>
         </div>
       </div>
     </div>
