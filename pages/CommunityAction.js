@@ -44,25 +44,25 @@ const CommunityAction = () => {
         </p>
         <ul className="list-disc list-inside space-y-2 sm:text-lg ml-4 font-medium text-myblue underline underline-offset-2 ">
           <li>
-            <Link className="hover:text-gray-600" href="\NoahsArk">
+            <Link className="hover:text-gray-600" href="NoahsArk">
               Noah's Ark
             </Link>
           </li>
           <li>
             {" "}
-            <Link className="hover:text-gray-600" href="\FoodBank">
+            <Link className="hover:text-gray-600" href="/FoodBank">
               Food Bank
             </Link>
           </li>
           <li>
             {" "}
-            <Link className="hover:text-gray-600" href="\CityMission">
+            <Link className="hover:text-gray-600" href="/CityMission">
               Choucester City Mission
             </Link>
           </li>
           <li>
             {" "}
-            <Link className="hover:text-gray-600" href="\StreetPastors">
+            <Link className="hover:text-gray-600" href="/StreetPastors">
               Choucester Street Pastors
             </Link>
           </li>

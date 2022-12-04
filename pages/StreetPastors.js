@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 
 import streetPastorsLogo from "../public/images/streetPastorsLogo.png";
 import streetPastors from "../public/images/streetPastors.jpg";
@@ -28,8 +28,8 @@ const StreetPastors = () => {
 
         <div className=" items-start">
           <div
-            className="md:float-right  relative  
-          w-full md:w-[400px] h-[40vh] mb-4 rounded-lg overflow-hidden"
+            className="lg:float-right  relative  
+          w-full lg:w-[400px] h-[40vh] lg:h-[50vh] mb-4 rounded-lg overflow-hidden"
           >
             <Image
               src={streetPastorsLogo}

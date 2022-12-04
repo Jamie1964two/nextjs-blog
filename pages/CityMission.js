@@ -42,9 +42,9 @@ const CityMission = () => {
               // className="animate-fadein1"
             />
           </div> */}
-          <div className="  md:p-4 sm:text-lg space-y-4">
+          <div className="  md:p-4 md:pl-0 sm:text-lg space-y-4">
             <h1 className="mr-2 mb-2 sm:mr-4 text-myblue inline-block text-2xl sm:text-4xl font-medium">
-              Taking Jesus on to the Streets
+              The Love of Jesus on the Streets
             </h1>
             <p className="sm:text-lg">
               Choucester City Mission is a registered charity working with the
