@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -13,13 +14,24 @@ const Events = () => {
   const [eventsArrayCounter, setEventsArrayCounter] = useState(0);
 
   const eventsArray = [
-    { img: "church.svg", text1: "Sunday Service", text2: "10:30am" },
+    {
+      img: "church.svg",
+      text1: "Sunday Service",
+      text2: "10:30am",
+      href: "/Sunday",
+    },
     {
       img: "ark.svg",
       text1: "Noah's Ark Stay & Play",
       text2: "Friday 10:00am",
+      href: "/NoahsArk",
     },
-    { img: "coffee.svg", text1: "Coffee & Company", text2: "Tuesday 10:30am" },
+    {
+      img: "coffee.svg",
+      text1: "Coffee & Company",
+      text2: "Tuesday 10:30am",
+      href: "/Calendar",
+    },
   ];
 
   const updateEvents = () => {
@@ -128,12 +140,12 @@ const Events = () => {
           {eventsArray[eventsArrayCounter].text2}
         </p>
         <div className="mt-4">
-          <a
-            href="#"
+          <Link
+            href={eventsArray[eventsArrayCounter].href}
             className="text-gray-500 text-xs sm:text-sm md:text-base bg-gray-100 hover:bg-white font-medium rounded-lg border-2 border-grey-500 px-2 py-1"
           >
             Find out more
-          </a>
+          </Link>
         </div>
       </div>
     </div>

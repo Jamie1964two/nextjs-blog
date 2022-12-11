@@ -18,7 +18,7 @@ export default function Action() {
           trigger: ".picture",
           pin: true, // pin the trigger element while active
           start: "top top", // when the top of the trigger hits the top of the viewport
-          end: "+=500", // end after scrolling 500px beyond the start
+          // end: "+=500", // end after scrolling 500px beyond the start
           //scrub: 1,
           toggleActions: "play complete none reset",
         },
@@ -43,25 +43,25 @@ export default function Action() {
           ".text3",
           {
             // x: -900,
-            duration: 1,
+            duration: 0.6,
             opacity: 1,
           },
-          "+=50%"
+          "-=50%"
         )
         .to(
           ".text3",
           {
             // x: -900,
-            duration: 0.2,
+            duration: 0.1,
             "background-color": "rgba(255,255,255,0.3)",
-          },
-          "+=20%"
+          }
+          //"-=20%"
         )
         .to(
           ".text3",
           {
             // x: -900,
-            duration: 0.2,
+            duration: 0.1,
             "background-color": "rgba(255,255,255,0.1)",
           }
           //"-=10%"
