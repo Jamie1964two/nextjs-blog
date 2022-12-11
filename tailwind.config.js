@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  //purge: [],
+  //mode: "jit",
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -57,6 +59,8 @@ module.exports = {
       },
       colors: {
         myblue: "#77b1d1",
+        "myblue-dark": "hsl(202, 49%, 40%)",
+        "myblue-light": "hsl(202, 49%, 80%)",
       },
       screens: {
         tall: { raw: "(max-height: 420px)" },

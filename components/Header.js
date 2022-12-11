@@ -148,7 +148,7 @@ const resources = [
   {
     name: "Resources",
     description: "Check out our free materials to help you grow in faith",
-    href: "#",
+    href: "Resources",
     icon: MegaphoneIcon,
   },
 ];

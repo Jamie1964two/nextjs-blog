@@ -20,7 +20,7 @@ export default function Action() {
           start: "top top", // when the top of the trigger hits the top of the viewport
           end: "+=500", // end after scrolling 500px beyond the start
           //scrub: 1,
-          toggleActions: "play pause resume reset",
+          toggleActions: "play complete none reset",
         },
       });
 

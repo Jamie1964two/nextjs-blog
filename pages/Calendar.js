@@ -28,7 +28,7 @@ const Calendar = () => {
 
         <iframe
           loading="lazy"
-          frameborder="0"
+          frameBorder="0"
           height="800"
           scrolling="yes"
           src="https://citygloucester.churchsuite.co.uk/embed/calendar?preview=true"

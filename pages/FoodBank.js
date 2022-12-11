@@ -58,16 +58,16 @@ const FoodBank = () => {
             <p className="font-medium">
               Please get in touch if we could help you
             </p>
-            <div class="basis-4/12 md:pl-6  text-myblue font-medium">
-              {/* <div class="flex items-center justify-start mb-4 text-myblue"> */}
+            <div className="basis-4/12 md:pl-6  text-myblue font-medium">
+              {/* <div className="flex items-center justify-start mb-4 text-myblue"> */}
               {/* <div className="hidden sm:block"> */}
 
-              <p class="flex items-center justify-start mb-4">
+              <p className="flex items-center justify-start mb-4">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
-                  class="w-[24px] -ml-[2px] mr-3"
+                  className="w-[24px] -ml-[2px] mr-3"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   //viewBox="0 0 512 512"
@@ -76,7 +76,7 @@ const FoodBank = () => {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  //class="w-6 h-6 mr-4"
+                  //className="w-6 h-6 mr-4"
                 >
                   <path
                     stroke-linecap="round"
@@ -86,13 +86,13 @@ const FoodBank = () => {
                 </svg>
                 The Chapel, Seymour Road, Choucester, GL15PT
               </p>
-              <p class="flex items-center justify-start mb-4">
+              <p className="flex items-center justify-start mb-4">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="envelope"
-                  class="w-[18px] mr-4"
+                  className="w-[18px] mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -104,13 +104,13 @@ const FoodBank = () => {
                 </svg>
                 info@choucester.foodbank.org.uk
               </p>
-              <p class="flex items-center justify-start mb-4">
+              <p className="flex items-center justify-start mb-4">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="phone"
-                  class="w-[18px] mr-4"
+                  className="w-[18px] mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"

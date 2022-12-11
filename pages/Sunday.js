@@ -48,7 +48,7 @@ const Sunday = () => {
           gathering featuring a time of worship and then a talk. Afterwards,
           enjoy a coffee and biscuit(s) with us.
         </p>
-        <h2 className="mr-2 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
+        <h2 className="mr-2 sm:mr-4 mt-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
           What to expect
         </h2>
         <ul className="list-disc my-4 ml-8 sm:text-lg space-y-2">
@@ -70,7 +70,7 @@ const Sunday = () => {
             breakfast before the meeting or lunch after the meeting.
           </li>
         </ul>
-        <h2 className="mr-2 mb-4 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
+        <h2 className="mr-2 mb-4 mt-4 sm:mr-4 text-gray-500 inline-block text-2xl sm:text-4xl font-medium">
           FAQ
         </h2>
 
