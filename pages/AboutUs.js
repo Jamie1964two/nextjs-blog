@@ -8,8 +8,12 @@ const AboutUs = () => {
   return (
     <>
       <Head>
-        <title>CityChurch Choucester: About Us</title>
+        <title>About Us | CityChurch Choucester</title>
         {/* <meta property="og:title" content="My page title" key="title" /> */}
+        <meta
+          name="description"
+          content="A breif description CityChurch Choucester's purpose and Sunday meeting times."
+        />
       </Head>
 
       <div className="mb-24">

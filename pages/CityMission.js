@@ -1,32 +1,40 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 import cityMission from "../public/images/cityMission.jpg";
-import cityMissionLogo from "../public/images/cityMissionLogo.webp";
 
 const CityMission = () => {
   return (
-    <div className="mb-24">
-      <div className="relative md:w-full h-[50vh]">
-        <Image
-          src={cityMission}
-          alt="City Mission"
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-            position: "absolute",
-          }}
+    <>
+      <Head>
+        <title>City Mission | CityChurch Choucester</title>
+        <meta
+          name="description"
+          content="CityChurch Choucester supports the work of City Mission Choucester."
         />
-      </div>
+      </Head>
+      <div className="mb-24">
+        <div className="relative md:w-full h-[50vh]">
+          <Image
+            src={cityMission}
+            alt="City Mission"
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              position: "absolute",
+            }}
+          />
+        </div>
 
-      <div className="m-4 sm:m-8 mt-6 sm:mt-12">
-        <h1 className="mb-2 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
-          Choucester City Mission.
-        </h1>
+        <div className="m-4 sm:m-8 mt-6 sm:mt-12">
+          <h1 className="mb-2 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
+            Choucester City Mission.
+          </h1>
 
-        <div className="md:flex items-start">
-          {/* <div
+          <div className="md:flex items-start">
+            {/* <div
             className="md:basis-1/2 lg:basis-1/3 relative  
           w-full md:w-1/2 h-[40vh] my-4 rounded-lg overflow-hidden"
           >
@@ -42,27 +50,28 @@ const CityMission = () => {
               // className="animate-fadein1"
             />
           </div> */}
-          <div className="  md:p-4 md:pl-0 sm:text-lg space-y-4">
-            <h1 className="mr-2 mb-2 sm:mr-4 text-myblue inline-block text-2xl sm:text-4xl font-medium">
-              The Love of Jesus on the Streets
-            </h1>
-            <p className="sm:text-lg">
-              Choucester City Mission is a registered charity working with the
-              homeless and other marginalised groups within the city of
-              Choucester and the local area. Their hard-working volunteers come
-              from a range of different Christian backgrounds and churches, and
-              together they aim to take Jesus to the streets as they provide hot
-              food, drinks and friendship to our street friends.
-            </p>
-            <Link href="http://www.gloscitymission.org.uk/">
-              <div className="mt-8 p-2 border-2 border-myblue inline-block rounded-lg cursor-pointer hover:bg-gray-100">
-                <p className="font-medium text-myblue">Find out more</p>
-              </div>
-            </Link>
-            {/* <div class="basis-4/12 md:pl-6  text-myblue font-medium">
+            <div className="  md:p-4 md:pl-0 sm:text-lg space-y-4">
+              <h1 className="mr-2 mb-2 sm:mr-4 text-myblue inline-block text-2xl sm:text-4xl font-medium">
+                The Love of Jesus on the Streets
+              </h1>
+              <p className="sm:text-lg">
+                Choucester City Mission is a registered charity working with the
+                homeless and other marginalised groups within the city of
+                Choucester and the local area. Their hard-working volunteers
+                come from a range of different Christian backgrounds and
+                churches, and together they aim to take Jesus to the streets as
+                they provide hot food, drinks and friendship to our street
+                friends.
+              </p>
+              <Link href="http://www.gloscitymission.org.uk/">
+                <div className="mt-8 p-2 border-2 border-myblue inline-block rounded-lg cursor-pointer hover:bg-gray-100">
+                  <p className="font-medium text-myblue">Find out more</p>
+                </div>
+              </Link>
+              {/* <div class="basis-4/12 md:pl-6  text-myblue font-medium">
               {/* <div class="flex items-center justify-start mb-4 text-myblue"> */}
-            {/* <div className="hidden sm:block"> */}
-            {/*}
+              {/* <div className="hidden sm:block"> */}
+              {/*}
               <p class="flex items-center justify-start mb-4">
                 <svg
                   aria-hidden="true"
@@ -124,10 +133,11 @@ const CityMission = () => {
                 01452 309683
               </p>
             </div> */}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

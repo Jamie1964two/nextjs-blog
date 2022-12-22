@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Image from "next/image";
 import Logo from "../components/Logo";
 import Header from "../components/Header";
@@ -14,8 +13,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>City Church Choucester</title>
+        <title>CityChurch Choucester</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="CityChurch Choucester is a community church in the center of the city whose purpose is loving Jesus and loving people."
+        />
       </Head>
       <main>
         <section className="relative h-[100vh] w-full">

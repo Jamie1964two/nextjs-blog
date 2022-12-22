@@ -39,7 +39,7 @@ const Logo = () => {
   return (
     <div
       ref={refLogo}
-      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl grow-0"
+      className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl grow-0 cursor-default"
     >
       <div id="container" className={styles.container}>
         <div className={styles.title_container}>

@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import PopOver from "./Header/PopOver";
 import LogoMini from "./LogoMini";
@@ -156,7 +157,7 @@ const contactUs = [
   {
     name: "Contact Us",
     description: "We'd love to hear from you",
-    href: "#",
+    href: "/Contact",
     icon: ChatBubbleLeftEllipsisIcon,
   },
 ];
@@ -190,12 +191,12 @@ export default function Header() {
           <PopOver menuList={resources} menuListName="Resources" />
         </Popover.Group>
         <div className="hidden md:items-center md:justify-end md:flex md:flex-0  hover:opacity-50">
-          <a
-            href="#"
+          <Link
+            href="/Contact"
             className="whitespace-nowrap font-medium text-myblue rounded-br-3xl rounded-tl-3xl border-myblue border-2 border-opacity-75 text-base font-sans px-4 py-2 hover:opacity-50"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
 

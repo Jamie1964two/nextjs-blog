@@ -29,7 +29,7 @@ const LogoMini = () => {
   // });
 
   return (
-    <div className="flex justify-start  lg:flex-1 ">
+    <div className="flex justify-start  lg:flex-1 hover:opacity-70 ">
       {/* <div className="max-w-[30px] max-h-[30px] border-2 border-blue-500"> */}
       <Link href="/">
         {/* <a href="#"> */}
