@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import serve from "../public/images/serve.jpg";
 import wheat from "../public/images/wheat.jpg";
+import ContactButton from "../components/ContactButton";
 
 const NewHere = () => {
   return (
@@ -52,9 +53,12 @@ const NewHere = () => {
             There are a number of other are other ways to connect with us
             throughout the week. We meet in small groups in homes and venues
             across the city on a number of weekday. Or come along to Coffee and
-            Communion or Noah's Ark Play and Stay if you have small children. To
-            find out more, please get in touch.
+            Communion or Noah's Ark Play and Stay if you have small children.
           </p>
+          <p className="mb-2 sm:text-lg">
+            To find out more, please get in touch.
+          </p>
+          <ContactButton />
           <div className="relative mt-8 w-full h-[50vh] lg:h-[70vh] flex justify-center">
             <Image
               src={wheat}

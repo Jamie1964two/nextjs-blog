@@ -160,8 +160,8 @@ const Contact = () => {
           Sundays at 10.30 am at The Chapel on Seymour Road, GL1 5PT (see map).
         </p> */}
         </div>
-        <section className="text-gray-600 body-font relative">
-          <div className="absolute inset-0 bg-gray-300">
+        <section className="text-gray-600 body-font relative min-h-96">
+          <div className="min-h-96  h-96 md:h-full md:absolute inset-0 bg-gray-300">
             <iframe
               width="100%"
               height="100%"
@@ -174,7 +174,7 @@ const Contact = () => {
               // style=""
             ></iframe>
           </div>
-          <div className="container px-5 py-24 mx-auto flex">
+          <div className="container md:px-5 px-2 py-4 md:py-24 mx-auto flex">
             <form
               onSubmit={handleSubmit}
               className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
