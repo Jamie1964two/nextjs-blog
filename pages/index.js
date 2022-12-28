@@ -6,10 +6,20 @@ import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Events from "../components/Events";
+import Link from "next/link";
+import groq from "groq";
+import client from "../client";
+import imageUrlBuilder from "@sanity/image-url";
 
 import Action from "../components/Action";
 
-export default function Home() {
+const builder = imageUrlBuilder(client);
+
+function urlFor(source) {
+  return builder.image(source);
+}
+
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -37,6 +47,36 @@ export default function Home() {
               </h3>
             </div>
           </div>
+        </section>
+        <section>
+          {posts.length > 0 &&
+            posts.map(
+              ({ _id, title = "", slug = "", headerImage = "" }) =>
+                slug && (
+                  <Link
+                    href="/SpecialEvents/[slug]"
+                    as={`/SpecialEvents/${slug.current}`}
+                  >
+                    <div
+                      key={_id}
+                      className="flex justify-center items-center max-h-48 my-8 mx-8  overflow-hidden"
+                    >
+                      <div className="p-2 m-4 basis-1/2 max-h-48">
+                        {" "}
+                        <h2 className=" text-2xl sm:text-4xl font-bold text-myblue tracking-tight">
+                          {title}
+                        </h2>
+                      </div>
+                      <div className="basis-1/2 ">
+                        <img
+                          className=" w-full object-cover object-center"
+                          src={urlFor(headerImage).url()}
+                        />
+                      </div>
+                    </div>
+                  </Link>
+                )
+            )}
         </section>
 
         <section className="md:grid relative w-full gap-8 p-8 grid-cols-1 md:grid-cols-2 space-y-4 items-center">
@@ -87,4 +127,16 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = await client.fetch(groq`
+      *[_type == "post"]
+    `);
+  console.log(posts);
+  return {
+    props: {
+      posts,
+    },
+  };
 }
