@@ -56,6 +56,7 @@ export default function Home({ posts }) {
                   <Link
                     href="/SpecialEvents/[slug]"
                     as={`/SpecialEvents/${slug.current}`}
+                    key={Math.random()}
                   >
                     <div
                       key={_id}
@@ -133,7 +134,7 @@ export async function getStaticProps() {
   const posts = await client.fetch(groq`
       *[_type == "post"]
     `);
-  console.log(posts);
+  // console.log("index" + posts.headerImage);
   return {
     props: {
       posts,

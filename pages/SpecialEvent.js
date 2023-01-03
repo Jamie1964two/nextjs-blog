@@ -112,8 +112,8 @@ const client = createClient({
 export async function getStaticProps() {
   const pages = await client.fetch(`*[_type == "post"]`);
 
-  console.log(JSON.stringify(pages));
-  console.log(pages[0].body);
+  // console.log(JSON.stringify(pages));
+  //console.log(pages[0].body);
 
   return {
     props: {

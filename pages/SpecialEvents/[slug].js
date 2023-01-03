@@ -143,7 +143,7 @@ export async function getStaticProps(context) {
   `,
     { slug }
   );
-  console.log(post);
+  console.log("slug page" + post.headerImage);
   return {
     props: {
       post,

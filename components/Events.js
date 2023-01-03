@@ -36,15 +36,15 @@ const Events = () => {
 
   const updateEvents = () => {
     setEventsArrayCounter((prev) => {
-      console.log("prev:" + prev);
-      console.log("eventsArray.Length:" + eventsArray.length);
+      // console.log("prev:" + prev);
+      //console.log("eventsArray.Length:" + eventsArray.length);
       if (prev == eventsArray.length - 1) {
         return 0;
       } else {
         return prev + 1;
       }
     });
-    console.log("updated" + eventsArrayCounter);
+    //console.log("updated" + eventsArrayCounter);
   };
 
   useLayoutEffect(() => {
