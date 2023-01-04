@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 import serve from "../../public/images/serve.jpg";
-import wheat from "../../public/images/wheat.jpg";
+import cathedral from "../../public/images/cathedral.jpg";
 import ContactButton from "../../components/ContactButton";
 // import { createClient } from "next-sanity";
 import client from "../../client";
@@ -44,7 +44,7 @@ const SpecialEvent = ({ post = defaultValues }) => {
   return (
     <>
       <Head>
-        <title>New Here | CityChurch Choucester</title>
+        <title>{post.title + "| CityChurch Choucester"}</title>
         <meta
           name="description"
           content="Answers to all your questions about what to expect at our Sunday meetings."
@@ -52,56 +52,40 @@ const SpecialEvent = ({ post = defaultValues }) => {
       </Head>
       <div className="mb-24">
         <div className="relative  md:w-full  overflow-hidden">
-          {/* <Image
-            src={serve}
-            alt="hands in a circle"
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              position: "absolute",
-            }}
-          /> */}
-          {post.headerImage && (
-            <img
-              className="h-[50vh] w-full object-cover"
-              src={urlFor(post.headerImage).url()}
-            />
-          )}
+          <img
+            className="h-[50vh] w-full object-cover"
+            src={urlFor(post.headerImage).url() || cathedral}
+          />
         </div>
 
         <div className="m-4 sm:m-8 mt-6 sm:mt-12">
-          <h1 className="mb-2 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
-            {post.title}
-          </h1>
-          <h2 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
-            {post.subheading}
-          </h2>
-          <div className="mb-4 sm:text-lg">
-            <PortableText value={post.body} components={ptComponents} />
-          </div>
+          {!post.title && (
+            <h1 className="mb-2 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
+              Page not found.
+            </h1>
+          )}
+          {post.title && (
+            <>
+              <h1 className="mb-2 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
+                {post.title}
+              </h1>
 
-          <ContactButton />
-          <div className="relative mt-8 w-full flex justify-center">
-            {/* <Image
-              src={wheat}
-              alt="field of wheat"
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover",
-                position: "absolute",
-              }}
-            /> */}
-            <img
-              className="w-full object-cover"
-              src={urlFor(post.mainImage).url()}
-            />
-            {/* <img
-              className="h-[50vh] w-full object-cover"
-              src={urlFor(post.headerImage).url()}
-            /> */}
-          </div>
+              <h2 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
+                {post.subheading}
+              </h2>
+              <div className="mb-4 sm:text-lg">
+                <PortableText value={post.body} components={ptComponents} />
+              </div>
+
+              <ContactButton />
+              <div className="relative mt-8 w-full flex justify-center">
+                <img
+                  className="w-full object-cover"
+                  src={urlFor(post.mainImage).url()}
+                />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
