@@ -52,10 +52,12 @@ const SpecialEvent = ({ post = defaultValues }) => {
       </Head>
       <div className="mb-24">
         <div className="relative  md:w-full  overflow-hidden">
-          <img
-            className="h-[50vh] w-full object-cover"
-            src={urlFor(post.headerImage).url() || cathedral}
-          />
+          {post.headerImage && (
+            <img
+              className="h-[50vh] w-full object-cover"
+              src={urlFor(post.headerImage).url()}
+            />
+          )}
         </div>
 
         <div className="m-4 sm:m-8 mt-6 sm:mt-12">
@@ -79,10 +81,12 @@ const SpecialEvent = ({ post = defaultValues }) => {
 
               <ContactButton />
               <div className="relative mt-8 w-full flex justify-center">
-                <img
-                  className="w-full object-cover"
-                  src={urlFor(post.mainImage).url() || "#"}
-                />
+                {post.mainImage && (
+                  <img
+                    className="w-full object-cover"
+                    src={urlFor(post.mainImage).url()}
+                  />
+                )}
               </div>
             </>
           )}
