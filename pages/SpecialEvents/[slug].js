@@ -81,7 +81,7 @@ const SpecialEvent = ({ post = defaultValues }) => {
               <div className="relative mt-8 w-full flex justify-center">
                 <img
                   className="w-full object-cover"
-                  src={urlFor(post.mainImage).url()}
+                  src={urlFor(post.mainImage).url() || "#"}
                 />
               </div>
             </>
