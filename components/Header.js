@@ -190,10 +190,11 @@ export default function Header() {
           <PopOver menuList={communityAction} menuListName="Community Action" />
           <PopOver menuList={resources} menuListName="Resources" />
         </Popover.Group>
-        <div className="hidden md:items-center md:justify-end md:flex md:flex-0  hover:opacity-50">
+        <div className=" md:items-center md:justify-end md:flex md:flex-0  hover:opacity-50">
+          {/* hidden */}
           <Link
             href="/Contact"
-            className="whitespace-nowrap font-medium text-myblue rounded-br-3xl rounded-tl-3xl border-myblue border-2 border-opacity-75 text-base font-sans px-4 py-2 hover:opacity-50"
+            className="whitespace-nowrap font-medium  md:text-myblue text-white rounded-br-3xl rounded-tl-3xl md:border-myblue border-white border-2 border-opacity-75 text-base font-sans px-4 py-2 hover:opacity-50"
           >
             Contact Us
           </Link>
@@ -216,7 +217,13 @@ export default function Header() {
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
-                <LogoMini />
+                <Popover.Button
+                  as={Link}
+                  href={"/"}
+                  className="focus:outline-none"
+                >
+                  <LogoMini />
+                </Popover.Button>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                     {/* focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myblue"> */}

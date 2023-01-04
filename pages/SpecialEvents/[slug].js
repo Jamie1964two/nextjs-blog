@@ -31,8 +31,16 @@ const ptComponents = {
     },
   },
 };
+const defaultValues = {
+  headerImage: null,
+  title: null,
+  subTitle: null,
+  mainImage: null,
+  body: null,
+};
 
-const SpecialEvent = ({ post }) => {
+const SpecialEvent = ({ post = defaultValues }) => {
+  console.log("slug page" + post.headerImage);
   return (
     <>
       <Head>
@@ -54,26 +62,25 @@ const SpecialEvent = ({ post }) => {
               position: "absolute",
             }}
           /> */}
-          <img
-            className="h-[50vh] w-full object-cover"
-            src={urlFor(post.headerImage).url()}
-          />
+          {post.headerImage && (
+            <img
+              className="h-[50vh] w-full object-cover"
+              src={urlFor(post.headerImage).url()}
+            />
+          )}
         </div>
 
         <div className="m-4 sm:m-8 mt-6 sm:mt-12">
-          <h1 className="mb-4 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
-            {post.title}.
+          <h1 className="mb-2 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
+            {post.title}
           </h1>
-          {/* <h1 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
-          For the Nation.
-        </h1> */}
-          <p className="mb-4 sm:text-lg">
+          <h2 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
+            {post.subheading}
+          </h2>
+          <div className="mb-4 sm:text-lg">
             <PortableText value={post.body} components={ptComponents} />
-          </p>
+          </div>
 
-          <p className="mb-2 sm:text-lg">
-            To find out more, please get in touch.
-          </p>
           <ContactButton />
           <div className="relative mt-8 w-full flex justify-center">
             {/* <Image
@@ -143,7 +150,7 @@ export async function getStaticProps(context) {
   `,
     { slug }
   );
-  console.log("slug page" + post.headerImage);
+
   return {
     props: {
       post,

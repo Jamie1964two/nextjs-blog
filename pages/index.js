@@ -51,12 +51,18 @@ export default function Home({ posts }) {
         <section>
           {posts.length > 0 &&
             posts.map(
-              ({ _id, title = "", slug = "", headerImage = "" }) =>
+              ({
+                _id,
+                title = "",
+                slug = "",
+                headerImage = "",
+                subheading = "",
+              }) =>
                 slug && (
                   <Link
                     href="/SpecialEvents/[slug]"
                     as={`/SpecialEvents/${slug.current}`}
-                    key={Math.random()}
+                    key={_id}
                   >
                     <div
                       key={_id}
@@ -66,6 +72,9 @@ export default function Home({ posts }) {
                         {" "}
                         <h2 className=" text-2xl sm:text-4xl font-bold text-myblue tracking-tight">
                           {title}
+                        </h2>
+                        <h2 className=" text-xl sm:text-2xl font-medium text-gray-400 tracking-tight">
+                          {subheading}
                         </h2>
                       </div>
                       <div className="basis-1/2 ">
@@ -134,7 +143,7 @@ export async function getStaticProps() {
   const posts = await client.fetch(groq`
       *[_type == "post"]
     `);
-  // console.log("index" + posts.headerImage);
+  console.log("index" + posts[0].headerImage);
   return {
     props: {
       posts,

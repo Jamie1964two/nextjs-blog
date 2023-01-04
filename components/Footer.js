@@ -126,7 +126,9 @@ const Footer = () => {
                 //className="mr-3"
                 role="img"
               >
-                <LogoMini />
+                <Link href="/" className="focus:outline-none">
+                  <LogoMini />
+                </Link>
               </div>
               <div className="text-lg md:text-xl">CityChurch Choucester</div>
             </div>

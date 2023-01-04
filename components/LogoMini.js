@@ -48,16 +48,16 @@ const LogoMini = () => {
 
   return (
     <div className="flex justify-start  lg:flex-1 hover:opacity-70 ">
-      <Link href="/" className="focus:outline-none">
-        <div
-          ref={miniLogoRef}
-          className="bg-gradient-to-br from-[#5b98b9] via-[hsl(201,55%,64%)] to-[#83adc3] rounded-tl-3xl rounded-br-3xl border-2 border-white text-white text-xl font-sans px-4 py-2 hover:opacity-50 font-medium"
-        >
-          <div className="div1 inline-block">C</div>
-          <div className="div2 inline-block">C</div>
-          <div className="div3 inline-block">G</div>
-        </div>
-      </Link>
+      {/* <Link href="/" className="focus:outline-none"> */}
+      <div
+        ref={miniLogoRef}
+        className="bg-gradient-to-br from-[#5b98b9] via-[hsl(201,55%,64%)] to-[#83adc3] rounded-tl-3xl rounded-br-3xl border-2 border-white text-white text-xl font-sans px-4 py-2 hover:opacity-50 font-medium"
+      >
+        <div className="div1 inline-block">C</div>
+        <div className="div2 inline-block">C</div>
+        <div className="div3 inline-block">G</div>
+      </div>
+      {/* </Link> */}
     </div>
   );
 };
