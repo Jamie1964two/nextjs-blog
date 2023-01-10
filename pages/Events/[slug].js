@@ -39,52 +39,54 @@ const defaultValues = {
   body: null,
 };
 
-const SpecialEvent = ({ post = defaultValues }) => {
-  console.log("slug page" + post.headerImage);
+const SpecialEvent = ({ event = defaultValues }) => {
+  console.log("slug page" + event.headerImage);
   return (
     <>
       <Head>
-        <title>{post.title + "| CityChurch Choucester"}</title>
+        <title>{event.title + "| CityChurch Choucester"}</title>
         <meta
           name="description"
-          content="Answers to all your questions about what to expect at our Sunday meetings."
+          content={
+            event.title + " at CityChurch Choucester " + event.subheading
+          }
         />
       </Head>
       <div className="mb-24">
         <div className="relative  md:w-full  overflow-hidden">
-          {post.headerImage && (
+          {event.headerImage && (
             <img
               className="h-[50vh] w-full object-cover"
-              src={urlFor(post.headerImage).url()}
+              src={urlFor(event.headerImage).url()}
             />
           )}
         </div>
 
         <div className="m-4 sm:m-8 mt-6 sm:mt-12">
-          {!post.title && (
+          {!event.title && (
             <h1 className="mb-2 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
               Page not found.
             </h1>
           )}
-          {post.title && (
+          {event.title && (
             <>
               <h1 className="mb-2 sm:mb-6 text-4xl sm:text-6xl font-bold text-myblue tracking-tight">
-                {post.title}
+                {event.title}
               </h1>
 
               <h2 className="mb-4 text-gray-700 inline-block text-2xl sm:text-4xl font-medium">
-                {post.subheading}
+                {event.subheading}
               </h2>
               <div className="mb-4 sm:text-lg">
-                <PortableText value={post.body} components={ptComponents} />
+                <PortableText value={event.body} components={ptComponents} />
               </div>
 
               <ContactButton />
               <div className="relative mt-8 w-full flex justify-center">
-                {post.mainImage && (
+                {event.mainImage && (
                   <img
                     className="w-full object-cover"
-                    src={urlFor(post.mainImage).url()}
+                    src={urlFor(event.mainImage).url()}
                   />
                 )}
               </div>
@@ -106,7 +108,7 @@ export default SpecialEvent;
 // });
 
 // export async function getStaticProps() {
-//   const pages = await client.fetch(`*[_type == "post"]`);
+//   const pages = await client.fetch(`*[_type == "event"]`);
 
 //   console.log(JSON.stringify(pages));
 //   console.log(pages[0].body);
@@ -120,7 +122,7 @@ export default SpecialEvent;
 
 export async function getStaticPaths() {
   const paths = await client.fetch(
-    `*[_type == "post" && defined(slug.current)][].slug.current`
+    `*[_type == "event" && display == "true" && defined(slug.current)][].slug.current`
   );
 
   return {
@@ -132,18 +134,18 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params;
-  const post = await client.fetch(
+  const event = await client.fetch(
     `
-    *[_type == "post" && slug.current == $slug][0]
+    *[_type == "event" && slug.current == $slug][0]
   `,
     { slug }
   );
 
   return {
     props: {
-      post,
+      event,
     },
   };
 }
 
-//export default Post
+//export default event

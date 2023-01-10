@@ -164,12 +164,14 @@ const contactUs = [
 
 export default function Header() {
   return (
-    <Popover className="absolute w-full md:bg-white md:opacity-90 px-4 sm:px-6 z-10 2xl:max-w-7xl 2xl:mx-auto">
+    <Popover className="absolute sm:relative w-full md:bg-white md:opacity-90 px-4 sm:px-6 z-10 2xl:max-w-7xl 2xl:mx-auto">
       {/* <div className="mx-auto max-w-7xl px-4 sm:px-6"> */}
 
       <div className="flex items-center justify-between py-4 sm:py-6">
         <div className="hidden sm:flex">
-          <LogoMini />
+          <Link href="/">
+            <LogoMini />
+          </Link>
         </div>
         {/* menu button */}
         <div className="md:-my-2  md:hidden md:w-0">
@@ -194,7 +196,7 @@ export default function Header() {
           {/* hidden */}
           <Link
             href="/Contact"
-            className="whitespace-nowrap font-medium  md:text-myblue text-white rounded-br-3xl rounded-tl-3xl md:border-myblue border-white border-2 border-opacity-75 text-base font-sans px-4 py-2 hover:opacity-50"
+            className="whitespace-nowrap font-medium  sm:text-myblue text-white rounded-br-3xl rounded-tl-3xl sm:border-myblue border-white border-2 border-opacity-75 text-base font-sans px-4 py-2 hover:opacity-50"
           >
             Contact Us
           </Link>

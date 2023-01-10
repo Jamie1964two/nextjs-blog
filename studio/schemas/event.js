@@ -1,10 +1,16 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'post',
-  title: 'Post',
+  name: 'event',
+  title: 'Event',
   type: 'document',
   fields: [
+    defineField({
+      name: 'display',
+      title: 'Display on site?',
+      type: 'boolean',
+      initialValue: false,
+    }),
     defineField({
       name: 'title',
       title: 'Title',
@@ -46,17 +52,7 @@ export default defineType({
         hotspot: true,
       },
     }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
+
     defineField({
       name: 'body',
       title: 'Body',

@@ -4,6 +4,7 @@ import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
+import Notices from "../components/Notices";
 import Footer from "../components/Footer";
 import Events from "../components/Events";
 import Link from "next/link";
@@ -19,7 +20,24 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-export default function Home({ posts }) {
+// const notices = [
+//   { title: "No church this Sunday", details: "Extra meeting on Weds" },
+//   { title: "Picnic after church", details: "Please bring a meal to share." },
+//   {
+//     title: "Help needed!",
+//     details: "Volunteer with the food bank. Please contact Kelly.",
+//   },
+//   {
+//     title: "Help needed!",
+//     details: "Volunteer with the food bank. Please contact Kelly.",
+//   },
+//   {
+//     title: "Help needed!",
+//     details: "Volunteer with the food bank. Please contact Kelly.",
+//   },
+// ];
+
+export default function Home({ events, notices }) {
   return (
     <>
       <Head>
@@ -31,62 +49,71 @@ export default function Home({ posts }) {
         />
       </Head>
       <main>
-        <section className="relative h-[100vh] w-full">
+        <section className="relative h-[100vh] md:h-[95vh] w-full">
           {/* <Header className="absolute" /> */}
           <div className="relative">
             <Carousel />
-            <div className="absolute  left-1/2  top-[35%] -translate-x-2/4 animate-ascend">
+            <div className="absolute  left-1/2  top-[35%] sm:top-[30%] -translate-x-2/4 animate-ascend">
               <h2 className="text-neutral-100  md:m-0  text-xl font-medium md:text-xl lg:text-2xl">
                 Welcome
               </h2>
               <Logo />
             </div>
-            <div className=" absolute left-1/2 bottom-[10%] md:bottom-[15%] lg:bottom-[20%] tall:bottom-[5%] -translate-x-2/4 animate-ascend text-center bg-gradient-to-br from-neutral-300 via-neutral-100 to-neutral-300 rounded-lg border-2 border-[rgba(0,0,0,0)] hover:border-gray-300 transition hover:duration-800 hover:opacity-90 cursor-pointer">
-              <h3 className=" text-neutral-800 p-4  lg:text-xl tall:text-sm">
-                Join us this Sunday 10:30am in the Chapel
+            <div className=" absolute left-1/2 bottom-[25%] md:bottom-[25%] lg:bottom-[25%] tall:bottom-[10%] -translate-x-2/4 animate-ascend text-center  text-gray-600 font-medium sm:font-normal bg-gradient-to-br from-[rgba(212,212,212,0.7)] via-[rgba(245,245,245,0.7)] to-[rgba(212,212,212,0.7)] rounded-lg border-2 border-[rgba(0,0,0,0)] hover:border-gray-300 transition hover:duration-800 hover:opacity-90 cursor-pointer ">
+              <h3 className=" text-neutral-800 p-4  lg:text-xl tall:text-sm mb-0 pb-0">
+                Join us this Sunday
+              </h3>
+              <h3 className=" text-neutral-800 p-4  lg:text-xl tall:text-sm mt-0 pt-0">
+                10:30am in the Chapel
               </h3>
             </div>
           </div>
         </section>
+        <section>{notices.length > 0 && <Notices notices={notices} />}</section>
         <section>
-          {posts.length > 0 &&
-            posts.map(
-              ({
-                _id,
-                title = "",
-                slug = "",
-                headerImage = "",
-                subheading = "",
-              }) =>
-                slug && (
-                  <Link
-                    href="/SpecialEvents/[slug]"
-                    as={`/SpecialEvents/${slug.current}`}
-                    key={_id}
-                  >
-                    <div
+          {events.length > 0 && (
+            <div className="">
+              {events.map(
+                ({
+                  _id = "",
+                  display = false,
+                  title = "",
+                  slug = "",
+                  headerImage = "",
+                  subheading = "",
+                }) =>
+                  slug &&
+                  display && (
+                    <Link
+                      href="/Events/[slug]"
+                      as={`/Events/${slug.current}`}
                       key={_id}
-                      className="flex justify-center items-center max-h-48 my-8 mx-8  overflow-hidden"
                     >
-                      <div className="p-2 m-4 basis-1/2 max-h-48">
-                        {" "}
-                        <h2 className=" text-2xl sm:text-4xl font-bold text-myblue tracking-tight">
-                          {title}
-                        </h2>
-                        <h2 className=" text-xl sm:text-2xl font-medium text-gray-400 tracking-tight">
-                          {subheading}
-                        </h2>
+                      <div
+                        key={_id}
+                        className="flex justify-center items-center max-h-48 mt-8 md:mt-12 mx-8  overflow-hidden"
+                      >
+                        <div className="p-2 m-4 basis-1/2 max-h-48">
+                          {" "}
+                          <h2 className=" text-2xl sm:text-4xl font-bold text-myblue tracking-tight mb-1">
+                            {title}
+                          </h2>
+                          <h2 className=" text-lg sm:text-xl font-medium text-gray-400 tracking-tight">
+                            {subheading}
+                          </h2>
+                        </div>
+                        <div className="basis-1/2 ">
+                          <img
+                            className=" w-full object-cover object-center"
+                            src={urlFor(headerImage).url()}
+                          />
+                        </div>
                       </div>
-                      <div className="basis-1/2 ">
-                        <img
-                          className=" w-full object-cover object-center"
-                          src={urlFor(headerImage).url()}
-                        />
-                      </div>
-                    </div>
-                  </Link>
-                )
-            )}
+                    </Link>
+                  )
+              )}
+            </div>
+          )}
         </section>
 
         <section className="md:grid relative w-full gap-8 p-8 grid-cols-1 md:grid-cols-2 space-y-4 items-center">
@@ -140,13 +167,20 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await client.fetch(groq`
-      *[_type == "post"]
-    `);
-  console.log("index" + posts[0].headerImage);
+  const events = await client.fetch(`*[_type == "event"]`);
+  const notices = await client.fetch(`*[_type == "notice" && display == true]`);
+  // && display == "true" && category == "Special Events"]`
+  // && "event" in category[].title]
+  // && display == "true"]
+  // && categories == "Special Events" ]
+  console.log("index" + JSON.stringify(notices));
+  console.log("");
+  //console.log("index" + JSON.stringify(posts[0].categories));
+
   return {
     props: {
-      posts,
+      events,
+      notices,
     },
   };
 }

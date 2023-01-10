@@ -7,7 +7,7 @@ import communion from "../public/images/communion.jpg";
 
 const Carousel = () => {
   return (
-    <div className="relative md:w-full h-[100vh]">
+    <div className="relative md:w-full h-[100vh] md:h-[95vh] ">
       {/* <div className="relative block  md:w-full  h-[100vh]">
         <Image
           src="/images/cathedral.jpg"
@@ -20,7 +20,7 @@ const Carousel = () => {
           }}
         />
       </div> */}
-      <div className="relative  md:w-full h-full">
+      <div className="relative  md:w-full h-full sm:h-[95%]">
         <Image
           src={cathedral}
           alt="Choucester Church"

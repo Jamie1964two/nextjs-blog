@@ -47,7 +47,7 @@ const LogoMini = () => {
   }, []);
 
   return (
-    <div className="flex justify-start  lg:flex-1 hover:opacity-70 ">
+    <div className="flex justify-start  lg:flex-1 hover:opacity-70 min-w-[76px] ">
       {/* <Link href="/" className="focus:outline-none"> */}
       <div
         ref={miniLogoRef}
