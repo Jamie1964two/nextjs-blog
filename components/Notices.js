@@ -66,10 +66,10 @@ const Notices = ({ notices }) => {
               class={
                 "notice" +
                 index +
-                " relative basis-full md:basis-1/2 xl:basis-1/3  sm:pl-6 pb-6"
+                " relative basis-full md:basis-1/2 xl:basis-1/3  sm:pl-6 pb-6 "
               }
             >
-              <div class="block rounded-xl drop-shadow-[4px_4px_6px_rgba(0,0,0,0.25)]  bg-white relative p-6  border-gray-50 border-t-2">
+              <div class="block rounded-xl drop-shadow-[4px_4px_6px_rgba(0,0,0,0.25)]  bg-white relative p-6  border-gray-50 border-t-2 sm:min-h-[200px]">
                 <h5 class="text-gray-900 text-md sm:text-lg md:text-xl leading-tight font-medium mb-2">
                   {notice.title}
                 </h5>
