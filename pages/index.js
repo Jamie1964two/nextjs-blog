@@ -182,5 +182,6 @@ export async function getStaticProps() {
       events,
       notices,
     },
+    revalidate: 10, // In seconds
   };
 }
